@@ -3,6 +3,8 @@
 #include <HTTPClient.h>
 #include "arduinoFFT.h"
 
+// Copyright 2024 Adam Carlin
+
 const uint16_t samples = 1024;
 const double samplingFrequency = 44100;
 
@@ -56,10 +58,10 @@ void setup() {
   M5.Lcd.setTextSize(2);
 
   Serial.begin(115200);
-  while (!Serial);
+  while (!Serial) continue;
   Serial.println("Ready");
 
-  //StickCP2.Mic.begin();
+  // StickCP2.Mic.begin();
   // Connect to WiFi
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -75,7 +77,7 @@ void loop() {
   static int16_t micData[samples];
   static int16_t dbAHistory[LCD_WIDTH];
   static int dbAHistoryIndex = 0;
-  static unsigned long lastPushTime = 0;
+  static uint64_t lastPushTime = 0;
 
   // Read microphone data
   if (StickCP2.Mic.record(micData, samples, samplingFrequency)) {
@@ -134,7 +136,7 @@ void loop() {
     const int effectiveGraphHeight = maxGraphHeight - bottomMargin - topMargin;
 
     // Draw X-axis line
-    M5.Lcd.drawLine(0, maxGraphHeight - bottomMargin, maxGraphWidth, maxGraphHeight - bottomMargin, WHITE); 
+    M5.Lcd.drawLine(0, maxGraphHeight - bottomMargin, maxGraphWidth, maxGraphHeight - bottomMargin, WHITE);
 
     // Center "Time" label beneath the graph
     String timeLabel = "Time";
