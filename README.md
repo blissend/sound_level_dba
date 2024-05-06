@@ -1,10 +1,10 @@
 # sound_level_dba
 
-Using m5stickc plus2 to record environmental noise and record that data to a pushgateway endpoint.
+Using m5stickc plus2 to record environmental noise and send the dBA to a pushgateway endpoint.
 
 ##
 
-This uses FFT to help calculate decibels and filters through a preset range of A-Weighted (what human ear can hear). Use the buttons to filter/calibrate the live capture to your decibel meter. Note the long press doesn't work so pressing the m5 button has to be one quick press and pause sadly.
+This uses FFT to help calculate decibels and filters through a preset range of A-Weighted coefficients(what human ear can hear). Use the buttons to filter/calibrate the live capture to your decibel meter. Note the long press doesn't work so pressing the m5 button has to be one quick press and pause sadly.
 
 ## Requirements
 
