@@ -8,7 +8,7 @@ This uses FFT to help calculate decibels and filters through a preset range of A
 
 ## Requirements
 
-Please see https://docs.m5stack.com/en/arduino/arduino_ide to setup your IDE. Install/configure the IDE...
+Please see https://docs.m5stack.com/en/arduino/arduino_ide to setup your IDE.
 
 * Add m5stack m5stickcplus2
 * Select the USB attached port
