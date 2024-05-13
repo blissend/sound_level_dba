@@ -1,5 +1,7 @@
 # sound_level_dba
 
+![picture](m5stickcplus2.jpg)
+
 Using m5stickc plus2 to record environmental noise and send the dBA to a pushgateway endpoint.
 
 ##
